@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Table, TableColumnHeaderCell } from "@radix-ui/themes";
-import Link from "next/link";
+import { Table } from "@radix-ui/themes";
 import prisma from "@/prisma/client";
+import Link from "../components/Link";
 import IssueStatusBadge from "../components/IssueStatusBadge";
 import delay from "delay";
 import IssueActions from "./IssueActions";
@@ -16,13 +16,13 @@ const IssuesPage = async () => {
       <Table.Root variant="surface">
         <Table.Header>
           <Table.Row>
-            <TableColumnHeaderCell>Issue</TableColumnHeaderCell>
-            <TableColumnHeaderCell className="hidden md:table-cell">
+            <Table.ColumnHeaderCell>Issue</Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell className="hidden md:table-cell">
               Status
-            </TableColumnHeaderCell>
-            <TableColumnHeaderCell className="hidden md:table-cell">
+            </Table.ColumnHeaderCell>
+            <Table.ColumnHeaderCell className="hidden md:table-cell">
               Created
-            </TableColumnHeaderCell>
+            </Table.ColumnHeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
