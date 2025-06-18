@@ -30,7 +30,7 @@ export default function RootLayout({
           <AuthProvider>
             <Theme appearance="light" accentColor="violet">
               <NavBar />
-              <main className="p-5">
+              <main className="p-6">
                 <Container>{children}</Container>
               </main>
             </Theme>
